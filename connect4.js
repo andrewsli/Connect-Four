@@ -53,6 +53,7 @@ function makeHtmlBoard() {
     for (var x = 0; x < WIDTH; x++) {
       const cell = document.createElement("td");
       cell.setAttribute("id", `${y}-${x}`);
+      cell.className = "game-cell"
       row.append(cell);
     }
     htmlBoard.append(row);
@@ -77,7 +78,7 @@ function findSpotForCol(x) {
 
 function placeInTable(y, x) {
   // make a div and insert into correct table cell
-  console.log("x and y", x, y)
+  // console.log("x and y", x, y)
   let piece = document.createElement("div") 
   piece.className = `piece p${currPlayer}`
 
@@ -98,7 +99,7 @@ function endGame(msg) {
 /** handleClick: handle click of column top to play piece */
 
 function handleClick(evt) {
-  console.log("clicked")
+  // console.log("clicked")
   // get x from ID of clicked cell
   var x = +evt.target.id;
 
@@ -128,7 +129,7 @@ function handleClick(evt) {
   // switch currPlayer 1 <-> 2
   currPlayer = currPlayer === 1 ? 2 : 1;
   let topCells = document.getElementsByClassName("top-cell");
-  console.log(topCells);
+  // console.log(topCells);
   for (let i of topCells){
     i.classList.toggle("p1")
     i.classList.toggle("p2")
