@@ -9,13 +9,12 @@ td {
 
 /* this chunk of css breaks the game */
 
-/* #column-top td:hover .top-cell{
-  background-color: blue;
+ #column-top td:hover .top-cell{
   margin: 5px;
   width: 80%;
   height: 80%;
   border-radius: 50%;
-} */
+}
 
 /* pieces are div within game table cells: draw as colored circles */
 

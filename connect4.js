@@ -40,7 +40,7 @@ function makeHtmlBoard() {
     headCell.setAttribute("id", x);
     
     let indicator = document.createElement("div");
-    indicator.className = "top-cell"
+    indicator.className = `top-cell p1`
     headCell.append(indicator)
 
     top.append(headCell);
@@ -127,6 +127,13 @@ function handleClick(evt) {
   // switch players
   // switch currPlayer 1 <-> 2
   currPlayer = currPlayer === 1 ? 2 : 1;
+  let topCells = document.getElementsByClassName("top-cell");
+  console.log(topCells);
+  for (let i of topCells){
+    i.classList.toggle("p1")
+    i.classList.toggle("p2")
+  }
+
 }
 
 /** checkForWin: check board cell-by-cell for "does a win start here?" */
